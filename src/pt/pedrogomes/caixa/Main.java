@@ -5,13 +5,16 @@ import java.util.Iterator;
 public class Main {
 
 	public static void main(String[] args) {
-		printTOpOrBottom(4);
-		printLeftandRigth(4, 2);
-		printTOpOrBottom(4);
-
+		printBox(4, 4);
+		printBox(8, 8);
 	}
-	public static void printTOpOrBottom(int size) {
-		for(int i = 0 ; i <size ; i++) {
+	public static void printBox(int width, int height) {
+		printTOpOrBottom(width);
+		printLeftandRigth(width, height - 2);
+		printTOpOrBottom(width);
+	}
+	public static void printTOpOrBottom(int width) {
+		for(int i = 0 ; i < width ; i++) {
 		System.out.print("*");
 		}
 		System.out.println();
