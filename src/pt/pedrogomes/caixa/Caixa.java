@@ -7,7 +7,7 @@ public class Caixa {
 		private String caracter;
 		//public Caixa() {
 		//}
-		public Caixa(int width, int height) {
+		public Caixa(int width, int height){
 			this(width, height, "*");
 		}
 		public Caixa(int width, int height, String caracter) {
@@ -15,7 +15,7 @@ public class Caixa {
 			this.height = height;
 			this.caracter = caracter;
 		}
-		public void printBox() {
+		public void printBox() throw Exception {
 			if (width<4) {
 				width = 4;
 				//Unchecked exception;
