@@ -5,8 +5,8 @@ public class Caixa {
 		private int width ; 
 		private int height;
 		private String caracter;
-//		public Caixa() {
-//		}
+		//public Caixa() {
+		//}
 		public Caixa(int width, int height) {
 			this(width, height, "*");
 		}
@@ -16,6 +16,22 @@ public class Caixa {
 			this.caracter = caracter;
 		}
 		public void printBox() {
+			if (width<4) {
+				width = 4;
+				//Unchecked exception;
+				//throw new RuntimeException("basnnsad");
+				
+				// Checked exception
+				//throw new Exception ("width cannot be less than 4")
+				
+			}if (height<4) {
+				height = 4;
+				//Unchecked exception;
+				//throw new RuntimeException("basnnsad");
+				
+				// Checked exception
+				//throw new Exception ("width cannot be less than 4")
+			}
 			printTOpOrBottom();
 			printLeftandRigth();
 			printTOpOrBottom();
