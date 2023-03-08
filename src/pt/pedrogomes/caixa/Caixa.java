@@ -1,5 +1,8 @@
 package pt.pedrogomes.caixa;
 
+import pt.pedrogomes.caixa.errors.NotEnougthHeightException;
+import pt.pedrogomes.caixa.errors.NotEnougthWidthException;
+
 public class Caixa {
 
 		private int width ; 
@@ -15,7 +18,7 @@ public class Caixa {
 			this.height = height;
 			this.caracter = caracter;
 		}
-		public void printBox() throw Exception {
+		public void printBox() throws NotEnougthHeightException, NotEnougthWidthException {
 			if (width<4) {
 				width = 4;
 				//Unchecked exception;
@@ -23,6 +26,7 @@ public class Caixa {
 				
 				// Checked exception
 				//throw new Exception ("width cannot be less than 4")
+				throw new NotEnougthWidthException(caracter);
 				
 			}if (height<4) {
 				height = 4;
@@ -31,6 +35,7 @@ public class Caixa {
 				
 				// Checked exception
 				//throw new Exception ("width cannot be less than 4")
+				throw new NotEnougthHeightException(caracter);
 			}
 			printTOpOrBottom();
 			printLeftandRigth();
